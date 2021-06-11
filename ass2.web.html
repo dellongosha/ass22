@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Form</h1>
+ <script>
+        function validateForm()
+    {
+        var fn=document.forms["form1"]["name"].value;
+            var n=document.forms["form1"]["number"].value;
+                var em=document.forms["form1"]["email"].value;
+                    var en=document.forms["form1"]["enquiry"].value;
+        if (fn==null|| fn=="")
+        {
+            alert("name cannot be blank");
+            return false;
+        }                
+        else if (n==null||n=="")
+        {
+            alert("mobile number cannot be blank");
+            return false;
+        }
+        else if (em==null||em=="")
+        {
+            alert("email cannot be blank");
+            return false;
+        }
+        else if (en==null||en=="")
+        {
+            alert("enquiry  cannot be blank");
+            return false;
+        }
+        if(en!="")
+        {
+            alert("enquiry is successful");
+            return false;
+        }
+    }
+  </script>
+
+   
+ <head>
+      <title>Enquiries</title>
+      <link rel="stylesheet"href="mystylesheet.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+	  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        </head>
+<body>
+<form name="form1" method="post" onsubmit="validateForm()">
+<label for="fname">Name:</label><br>
+<input type="text" id="fname" name="Name"><br>
+<label for= "number"> Number:</label><br>
+<input type="integer" id=number name="Number" pattern=[0-9]+><br>
+<label for="email">Enter your Email:</label><br>
+<input type="email" id="email" name "Email" 
+ pattern="[^ @]*@[^ @]*" placeholder="Example john@gmail.com">
+
+	<br />
+       <label for= "enquiry"> Enquiry:</label><br>
+       
+       <textarea rows = "5" cols = "60" name = "description">
+  
+         </textarea><br>
+
+        <button class="btn-contact">Submit</button>
+ 
+
+</body>
+</html>
+
+   
